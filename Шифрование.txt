@@ -1,0 +1,50 @@
+#include <iostream>
+#include <string>
+#include <openssl/sha.h>
+#include <openssl/rsa.h>
+#include <openssl/pem.h>
+
+std::string sha512(const std::string& input) {
+    unsigned char hash[SHA512_DIGEST_LENGTH];
+    SHA512_CTX shaContext;
+    SHA512_Init(&shaContext);
+    SHA512_Update(&shaContext, input.c_str(), input.length());
+    SHA512_Final(hash, &shaContext);
+
+    std::stringstream ss;
+    for (int i = 0; i < SHA512_DIGEST_LENGTH; i++) {
+        ss << std::hex << std::setw(2) << std::setfill('0') << (int)hash[i];
+    }
+
+    return ss.str();
+}
+
+std::string rsaEncrypt(const std::string& message, RSA* rsaKey) {
+    int rsaLen = RSA_size(rsaKey);
+    std::vector<unsigned char> encrypted(rsaLen);
+
+    int result = RSA_public_encrypt(message.length(), reinterpret_cast<const unsigned char*>(message.c_str()), &encrypted[0], rsaKey, RSA_PKCS1_PADDING);
+    if (result == -1) {
+        // Handle encryption error
+    }
+
+    return std::string(reinterpret_cast<char*>(&encrypted[0]), result);
+}
+
+int main() {
+    // Генерация ключей RSA
+    RSA* rsaKey = RSA_generate_key(2048, RSA_F4, nullptr, nullptr);
+
+    // Пример использования
+    std::string message = "Пример сообщения для шифрования";
+    std::string hashedMessage = sha512(message);
+    std::string encryptedMessage = rsaEncrypt(hashedMessage, rsaKey);
+
+    std::cout << "Исходное сообщение: " << message << std::endl;
+    std::cout << "Хэш SHA-512: " << hashedMessage << std::endl;
+    std::cout << "Зашифрованное сообщение: " << encryptedMessage << std::endl;
+
+    RSA_free(rsaKey);
+
+    return 0;
+}
