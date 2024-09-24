@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Собрать ланч</title>
+    <link href="Lab-2 Rod css.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="lunch.css">
+</head>
+<body>
+    <header>
+        <h1>Собрать ланч</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="lunch.html" class="active">Собрать ланч</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="soups">
+            <h2>Супы</h2>
+            <div class="dishes">
+                <div class="dish">
+                    <img src="soup1.jpg" alt="Суп 1">
+                    <div>
+                        <p class="dish-name">Суп-пюре из брокколи</p>
+                        <p class="dish-weight">Объем: 300 мл</p>
+                        <p class="dish-price">Цена: 150 ₽</p>
+                        <button>Добавить</button>
+                    </div>
+                </div>
+                <div class="dish">
+                    <img src="soup2.jpg" alt="Суп 2">
+                    <div>
+                        <p class="dish-name">Суп с грибами</p>
+                        <p class="dish-weight">Объем: 350 мл</p>
+                        <p class="dish-price">Цена: 160 ₽</p>
+                        <button>Добавить</button>
+                    </div>
+                </div>
+                <div class="dish">
+                    <img src="soup3.jpg" alt="Суп 3">
+                    <div>
+                        <p class="dish-name">Суп минестроне</p>
+                        <p class="dish-weight">Объем: 400 мл</p>
+                        <p class="dish-price">Цена: 140 ₽</p>
+                        <button>Добавить</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="main-dishes">
+            <h2>Главные блюда</h2>
+            <div class="dishes">
+                <div class="dish">
+                    <img src="main1.jpg" alt="Блюдо 1">
+                    <div>
+                        <p class="dish-name">Курица гриль</p>
+                        <p class="dish-weight">Вес: 200 г</p>
+                        <p class="dish-price">Цена: 250 ₽</p>
+                        <button>Добавить</button>
+                    </div>
+                </div>
+                <div class="dish">
+                    <img src="main2.jpg" alt="Блюдо 2">
+                    <div>
+                        <p class="dish-name">Говядина по-бургундски</p>
+                        <p class="dish-weight">Вес: 300 г</p>
+                        <p class="dish-price">Цена: 300 ₽</p>
+                        <button>Добавить</button>
+                    </div>
+                </div>
+                <div class="dish">
+                    <img src="main3.jpg" alt="Блюдо 3">
+                    <div>
+                        <p class="dish-name">Паста Альфредо</p>
+                        <p class="dish-weight">Вес: 250 г</p>
+                        <p class="dish-price">Цена: 220 ₽</p>
+                        <button>Добавить</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="drinks">
+            <h2>Напитки</h2>
+            <div class="dishes">
+                <div class="dish">
+                    <img src="drink1.jpg" alt="Напиток 1">
+                    <div>
+                        <p class="dish-name">Сок апельсиновый</p>
+                        <p class="dish-weight">Объем: 200 мл</p>
+                        <p class="dish-price">Цена: 80 ₽</p>
+                        <button>Добавить</button>
+                    </div>
+                </div>
+                <div class="dish">
+                    <img src="drink2.jpg" alt="Напиток 2">
+                    <div>
+                        <p class="dish-name">Минеральная вода</p>
+                        <p class="dish-weight">Объем: 500 мл</p>
+                        <p class="dish-price">Цена: 50 ₽</p>
+                        <button>Добавить</button>
+                    </div>
+                </div>
+                <div class="dish">
+                    <img src="drink3.jpg" alt="Напиток 3">
+                    <div>
+                        <p class="dish-name">Чай черный</p>
+                        <p class="dish-weight">Объем: 300 мл</p>
+                        <p class="dish-price">Цена: 60 ₽</p>
+                        <button>Добавить</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Контакты: email@example.com | Телефон: +7 (999) 999-99-99</p>
+    </footer>
+</body>
+</html>
