@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню Ресторана</title>
+    <link rel="stylesheet" href="Lab-6 Rod style.css">
+</head>
+<body>
+    <h1>Меню Ресторана</h1>
+
+    <div id="lunch-section">
+        <h2>Доступные варианты ланча</h2>
+        <div class="lunch-options">
+            <div class="lunch-option">
+                <div class="dish">
+                    <img src="soup.jpg" alt="Суп" />
+                    <p>Суп</p>
+                    <p class="dessert">Десерт: Торт</p>
+                </div>
+                <div class="dish">
+                    <img src="main.jpg" alt="Главное блюдо" />
+                    <p>Главное блюдо</p>
+                    <p class="dessert">Десерт: Мороженое</p>
+                </div>
+                <div class="dish">
+                    <img src="salad.jpg" alt="Салат" />
+                    <p>Салат</p>
+                    <p class="dessert">Десерт: Фруктовый салат</p>
+                </div>
+                <div class="dish">
+                    <img src="drink.jpg" alt="Напиток" />
+                    <p>Напиток</p>
+                    <p class="dessert">Десерт: Компот</p>
+                </div>
+            </div>
+            <div class="lunch-option">
+                <div class="dish">
+                    <img src="soup.jpg" alt="Суп" />
+                    <p>Суп</p>
+                </div>
+                <div class="dish">
+                    <img src="main.jpg" alt="Главное блюдо" />
+                    <p>Главное блюдо</p>
+                </div>
+                <div class="dish">
+                    <img src="drink.jpg" alt="Напиток" />
+                    <p>Напиток</p>
+                </div>
+            </div>
+            <div class="lunch-option">
+                <div class="dish">
+                    <img src="soup.jpg" alt="Суп" />
+                    <p>Суп</p>
+                </div>
+                <div class="dish">
+                    <img src="salad.jpg" alt="Салат" />
+                    <p>Салат</p>
+                </div>
+                <div class="dish">
+                    <img src="drink.jpg" alt="Напиток" />
+                    <p>Напиток</p>
+                </div>
+            </div>
+            <div class="lunch-option">
+                <div class="dish">
+                    <img src="main.jpg" alt="Главное блюдо" />
+                    <p>Главное блюдо</p>
+                </div>
+                <div class="dish">
+                    <img src="salad.jpg" alt="Салат" />
+                    <p>Салат</p>
+                </div>
+                <div class="dish">
+                    <img src="drink.jpg" alt="Напиток" />
+                    <p>Напиток</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <form id="order-form">
+        <h2>Заказ</h2>
+        <div>
+            <label for="soup">Выберите суп:</label>
+            <select id="soup">
+                <option value="">--Выберите--</option>
+                <option value="суп1">Суп 1</option>
+                <option value="суп2">Суп 2</option>
+            </select>
+        </div>
+        <div>
+            <label for="main">Выберите главное блюдо:</label>
+            <select id="main">
+                <option value="">--Выберите--</option>
+                <option value="блюдо1">Блюдо 1</option>
+                <option value="блюдо2">Блюдо 2</option>
+            </select>
+        </div>
+        <div>
+            <label for="salad">Выберите салат:</label>
+            <select id="salad">
+                <option value="">--Выберите--</option>
+                <option value="салат1">Салат 1</option>
+                <option value="салат2">Салат 2</option>
+            </select>
+        </div>
+        <div>
+            <label for="drink">Выберите напиток:</label>
+            <select id="drink">
+                <option value="">--Выберите--</option>
+                <option value="напиток1">Напиток 1</option>
+                <option value="напиток2">Напиток 2</option>
+            </select>
+        </div>
+        <button type="submit">Оформить заказ</button>
+    </form>
+
+    <div id="notification" class="notification hidden">
+        <p id="notification-message"></p>
+        <button id="close-notification">Окей</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
